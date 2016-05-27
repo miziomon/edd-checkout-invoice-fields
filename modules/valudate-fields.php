@@ -7,10 +7,10 @@
 
 // check for errors with out custom fields
 add_action('edd_checkout_error_checks', function ($data) {
-    if (!isset($data['edd_company']) || $data['edd_company'] == '') {
-
-        edd_set_error('invalid_company', __('You must provide a valid value.', 'pippin_edd'));
-    }
+    
+    
+    $CompanyValidator = new CompanyValidator();
+    $CompanyValidator->validate($data);
 
     if (!isset($data['edd_vat']) || $data['edd_vat'] == '') {
 
