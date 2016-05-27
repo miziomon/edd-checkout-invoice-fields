@@ -59,7 +59,7 @@ Initial release
 
 If you find this useful and you if you want to contribute, there are three ways:
 
-   1. Visit [Github repo]()
+   1. Visit [Github repo](https://github.com/miziomon/easy-digital-downloads-checkout-invoice-fields)
    2. If you want to translate it to your language (there are just a few lines of text), you can use the GlotPress translation project;
    3. Using the plugin is free, but if you want you can send me some money with PayPal [here](http://maurizio.mavida.com/)
 

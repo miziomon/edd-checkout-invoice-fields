@@ -1,4 +1,4 @@
-# Easy Digital Downloads Checkout VAT
+# EDD - Checkout Invoice Fields
 
 This plugin allows to add COMPANY NAME, FISCAL CODE, VAT and ADDRESS to Easy digital download checkout page
 
