@@ -2,9 +2,16 @@
 /*
   Plugin Name: EDD Checkout Invoice Fields 
   Version: 0.1
-  Description: Add extra field in checkout page needed for invoice
+  Description: Add invoice extra fields in checkout page
   Author: miziomon
   Author URI: http://maurizio.mavida.com
+ */
+
+
+/***
+ * reference
+ * https://pippinsplugins.com/adding-custom-fields-to-the-easy-digital-downloads-checkout/
+ * http://sumobi.com/adding-a-custom-checkout-field-in-easy-digital-downloads/
  */
 
 
@@ -16,10 +23,9 @@ define( $plugin_slug . '_URL', plugin_dir_url(__FILE__));
 
 // load localizzation
 add_action('plugins_loaded', function () {
-  load_plugin_textdomain( 'edd_cif', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+  $plugin_rel_path = dirname( plugin_basename(__FILE__) ) . '/languages/';
+  load_plugin_textdomain( 'edd_cif', false, $plugin_rel_path );
 });
-
-
 
 // autoload
 spl_autoload_register(function ($class_name) {
@@ -30,7 +36,6 @@ spl_autoload_register(function ($class_name) {
     }
 });
 
-
 // autoload libs
 $libs = dirname(__FILE__) . '/modules/';
 if (is_readable($libs)) {
@@ -40,3 +45,6 @@ if (is_readable($libs)) {
         }
     }
 }
+
+
+
