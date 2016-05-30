@@ -10,21 +10,22 @@
  *
  * @author maurizio
  */
-class CompanyValidator
+class VatValidator
 {
 
-    //put your code here
 
     function __construct()
     {
         
     }
 
+    /**
+     * todo: add validation for VAT 
+     * @param type $data
+     */
     public function validate($data)
     {
-        if (!isset($data['edd_company']) || $data['edd_company'] == '') {
 
-            edd_set_error('invalid_company', __('You must provide a valid value.', 'pippin_edd'));
-        }
+        return true;
     }
 }
