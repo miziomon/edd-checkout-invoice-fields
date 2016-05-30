@@ -9,14 +9,18 @@
 // store the custom field data in the payment meta
 add_filter('edd_payment_meta', function ($payment_meta) {
 
-    // sanitize string - http://codex.wordpress.org/Validating_Sanitizing_and_Escaping_User_Data
+    // sanitize string 
+    // http://codex.wordpress.org/Validating_Sanitizing_and_Escaping_User_Data
+    $vat = sanitize_text_field($_POST['edd_vat']);
+    $fc = sanitize_text_field($_POST['edd_fc']);
+    $address = sanitize_text_field($_POST['edd_address']);
+    $company = sanitize_text_field($_POST['edd_company']);
 
-    $payment_meta['vat'] = isset( $_POST['edd_vat'] ) ? sanitize_text_field( $_POST['edd_vat'] ) : '';
-    $payment_meta['fc'] = isset( $_POST['edd_fc'] ) ? sanitize_text_field( $_POST['edd_fc'] ) : '';
-    $payment_meta['address'] = isset( $_POST['edd_address'] ) ? sanitize_text_field( $_POST['edd_address'] ) : '';
-    $payment_meta['company'] = isset( $_POST['edd_company'] ) ? sanitize_text_field( $_POST['edd_company'] ) : '';
-    
+    //add meta
+    $payment_meta['vat'] = isset($vat) ? $vat : '';
+    $payment_meta['fc'] = isset($fc) ? $fc : '';
+    $payment_meta['address'] = isset($address) ? $address : '';
+    $payment_meta['company'] = isset($company) ? $company : '';
+
     return $payment_meta;
-    
-    
 });
