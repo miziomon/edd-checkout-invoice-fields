@@ -9,7 +9,7 @@
 
 // output our custom field HTML
 
-add_action('edd_purchase_form_user_info', function () {
+add_action('edd_purchase_form_user_info_fields', function () {
 
     ?>
     <p>
@@ -26,7 +26,7 @@ add_action('edd_purchase_form_user_info', function () {
         <label class="edd-label" for="edd-fc"><?php _e('Fiscal code', 'edd_cif'); ?><span class="edd-required-indicator">*</span></label>
         <span class="edd-description"><?php _e('Your Fiscal code (if you are a company use your VAT)', 'edd_cif'); ?></span>
         <input class="edd-input required" name="edd_fc" id="edd-fc" placeholder="<?php _e('Fiscal code', 'edd_cif'); ?>" value="" type="text" required >
-    </p>    
+    </p>
     <p>
         <label class="edd-label" for="edd-address"><?php _e('Full address', 'edd_cif'); ?><span class="edd-required-indicator">*</span></label>
         <span class="edd-description"><?php _e('Your full address with zip code and country', 'edd_cif'); ?></span>
@@ -36,5 +36,3 @@ add_action('edd_purchase_form_user_info', function () {
 
     <?php
 });
-
-
